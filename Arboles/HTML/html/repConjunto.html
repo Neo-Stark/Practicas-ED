@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Arbol binario: Rep del TDA ArbolBinario</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Arbol binario
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li class="current"><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Rep del TDA <a class="el" href="classArbolBinario.html">ArbolBinario</a> </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>T.D.A. <a class="el" href="classArbolBinario.html">ArbolBinario</a></p>
+<p>Una instancia <em>a</em> del tipo de dato abstracto <a class="el" href="classArbolBinario.html">ArbolBinario</a> sobre un dominio Tbase se puede construir como</p>
+<p>Un objeto vacío (árbol vacío) si no contiene ningún elemento. Lo denotamos {}</p>
+<p>Un árbol que contiene un elemento destacado, el nodo raíz, con un valor <em>e</em> en el dominio Tbase (denominado <em>etiqueta</em>), y dos subárboles (T<sub>i</sub>:izquierdo y T<sub>d</sub> derecho) del T.D.A.</p>
+<p><a class="el" href="classArbolBinario.html">ArbolBinario</a> sobre Tbase.</p>
+<p>Se establece una relación <em>padre-hijo</em> entre cada nodo y los nodos raíz de los subárboles (si los hubiera) que cuelgan de él. Lo denotamos {<em>e</em>,{T<sub>i</sub>},{T<sub>d</sub>}}.</p>
+<p>Para poder usar el TDA <a class="el" href="classArbolBinario.html">ArbolBinario</a> se debe incluir el fichero</p>
+<p><code>#include ArbolBinario.h</code></p>
+<p>El espacio requerido para el almacenamiento es <em>O(n)</em>. Donde <em>n</em> es el número de nodos del árbol.</p>
+<h1><a class="anchor" id="invConjunto"></a>
+Invariante de la representación</h1>
+<p>Sea <em>T</em>, un árbol binario sobre el tipo <em>Tbase</em>. Entonces el invariante de la representación es</p>
+<p>Si <em>T</em> es vacío, entonces T.laraiz = 0, y si no:</p>
+<p>T.laraiz-&gt;padre = 0 y</p>
+<p>&forall; n nodo de <em>T</em>, n &rArr;  izqda &ne; n &rArr; drcha y</p>
+<p>&forall; n,m, nodos de <em>T</em>, si n&rArr;izqda=m ó n&rArr;drcha=m, entonces m&rArr;padre= n</p>
+<h1><a class="anchor" id="faConjunto"></a>
+Función de abstracción</h1>
+<p>Sea <em>T</em> un árbol binario sobre el tipo <em>Tbase</em>, entonces si lo denotamos también Arbol(T.laraiz), es decir, como el árbol que cuelga de su raíz, entonces éste árbol del conjunto de valores en la representación se aplica al árbol</p>
+<p>T.laraiz&rArr;etiqueta, Arbol(T.laraiz&rArr;izqda) </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

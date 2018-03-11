@@ -1,0 +1,29 @@
+T.\+D.\+A. \hyperlink{classArbolBinario}{Arbol\+Binario}
+
+Una instancia {\itshape a} del tipo de dato abstracto \hyperlink{classArbolBinario}{Arbol\+Binario} sobre un dominio Tbase se puede construir como
+
+Un objeto vacío (árbol vacío) si no contiene ningún elemento. Lo denotamos \{\}
+
+Un árbol que contiene un elemento destacado, el nodo raíz, con un valor {\itshape e} en el dominio Tbase (denominado {\itshape etiqueta}), y dos subárboles (T\textsubscript{i}\+:izquierdo y T\textsubscript{d} derecho) del T.\+D.\+A.
+
+\hyperlink{classArbolBinario}{Arbol\+Binario} sobre Tbase.
+
+Se establece una relación {\itshape padre-\/hijo} entre cada nodo y los nodos raíz de los subárboles (si los hubiera) que cuelgan de él. Lo denotamos \{{\itshape e},\{T\textsubscript{i}\},\{T\textsubscript{d}\}\}.
+
+Para poder usar el T\+DA \hyperlink{classArbolBinario}{Arbol\+Binario} se debe incluir el fichero
+
+{\ttfamily \#include Arbol\+Binario.\+h}
+
+El espacio requerido para el almacenamiento es {\itshape O(n)}. Donde {\itshape n} es el número de nodos del árbol.\hypertarget{repConjunto_invConjunto}{}\section{Invariante de la representación}\label{repConjunto_invConjunto}
+Sea {\itshape T}, un árbol binario sobre el tipo {\itshape Tbase}. Entonces el invariante de la representación es
+
+Si {\itshape T} es vacío, entonces T.\+laraiz = 0, y si no\+:
+
+T.\+laraiz-\/$>$padre = 0 y
+
+{$\forall$} n nodo de {\itshape T}, n {$\Rightarrow$}  izqda {$\ne$} n {$\Rightarrow$} drcha y
+
+{$\forall$} n,m, nodos de {\itshape T}, si n{$\Rightarrow$}izqda=m ó n{$\Rightarrow$}drcha=m, entonces m{$\Rightarrow$}padre= n\hypertarget{repConjunto_faConjunto}{}\section{Función de abstracción}\label{repConjunto_faConjunto}
+Sea {\itshape T} un árbol binario sobre el tipo {\itshape Tbase}, entonces si lo denotamos también Arbol(T.\+laraiz), es decir, como el árbol que cuelga de su raíz, entonces éste árbol del conjunto de valores en la representación se aplica al árbol
+
+T.\+laraiz{$\Rightarrow$}etiqueta, Arbol(T.\+laraiz{$\Rightarrow$}izqda) 

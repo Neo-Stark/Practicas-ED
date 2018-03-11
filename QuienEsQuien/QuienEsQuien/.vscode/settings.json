@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "*.tcc": "cpp",
+        "array": "cpp",
+        "initializer_list": "cpp",
+        "iosfwd": "cpp",
+        "sstream": "cpp",
+        "cassert": "cpp",
+        "vector": "cpp",
+        "map": "cpp",
+        "iostream": "cpp",
+        "string": "cpp",
+        "set": "cpp",
+        "chrono": "cpp",
+        "algorithm": "cpp"
+    }
+}

@@ -1,0 +1,27 @@
+FECHA HISTÓRICA
+Atributos:
+int fecha
+string [tam] eventos
+int tam
+int num_eventos
+
+métodos:
+constructores | destructores
+busqueda palabra clave
+añadir eventos
+cargar fichero
+operador +
+operador > | <
+
+CRONOLOGIA
+atributos:
+Fecha_historica crono [TAM]
+métodos:
+constructores | destructor
+comprobar si fecha existe		#iRep: fechas deben estar ordenadas
+busqueda año
+añadir evento a cronologia
+ordenar cronología
+Busqueda palabra clave (haciendo uso del método de fecha histórica)
+Obtener evento en un rango de años
+operador + (usar sobrecarga operador + de FH en un bucle)
